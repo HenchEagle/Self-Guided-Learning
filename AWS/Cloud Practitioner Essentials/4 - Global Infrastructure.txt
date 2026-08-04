@@ -1,0 +1,31 @@
+** EDGE LOCATIONS **
+These are smaller lightweight "footprints" of our main app caching things like images, webpages and other assets for users to get the most popular resources without 
+having to retrieve them from a central location.
+
+Consistent deployment can be achieved through IaC (infrastructure as code) specifically AWS CloudFormation
+
+** SELECTING A REGION **
+Data is not allowed to move between AWS regions, unless explicitly allowed. It can however move between AZs (availability zones), however this introduces additional costs
+$0.01 / GB of data, this is where AZ-aware routing comes into play (works similarly to AS path selection)
+
+- Compliance, data must live in region X.
+- Proximity, how close you are to your customer base.
+- Feature availability, not all regions have the same AWS features.
+- Pricing, local costs such as TAX, energy costs etc.
+
+# Redundant Architecture ensures availability.
+This is achieved by utilising multiple availability zones, or regions.
+
+It assists with quicker disaster recovery, latency and business continuity
+
+** AMAZON CLOUDFRONT **
+CDN for hosting and caching content
+these edge services are seperate from AWS regions or AZs
+
+** AMAZON ROUTE 53 **
+Amazon DNS
+
+** CLOUD FORMATION **
+IaC service like terraform, docker or kubernetes yaml families
+
+Allows you to provision whole networks through a repeatable blueprint / config, to create identical environments accross different instances or regions.

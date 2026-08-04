@@ -1,0 +1,8 @@
+**Roles of the transport layer**
+Conversation Multiplexing
+Tracking individual conversations
+segmenting and reassembling data
+identifying applications
+Adding header information.
+
+TCP is known as a stateful connection-oriented protocol.

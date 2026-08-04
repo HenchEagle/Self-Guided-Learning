@@ -1,0 +1,17 @@
+Preventative Controls
+Measures to prevent security incidents before they happen
+
+Detective Controls
+Detect security incidents as they are happening or after the fact
+
+Corrective Controls
+Methods of recovering from security incidents and continuing operations
+
+Deterrent Controls
+Deter threat actors from causing incidents
+
+Directive Controls
+Promote security conscious behaviours and practices
+
+Compensating Controls
+Backup preventative measures designed to help if primary prevention systems do not work.

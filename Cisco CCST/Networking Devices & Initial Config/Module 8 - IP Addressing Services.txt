@@ -1,0 +1,40 @@
+==DNS SERVICES==
+URLs stored within DNS servers are known as fully-qualified domain names (FQDNs)
+
+-Types of records-
+A - end device IPv4
+NS - Authoritative Name Server
+AAAA - end device IPv6 (quad A)
+MX - Mail Exchange
+
+DNS: Layer 7
+When a request is made 4 sections (options) are always sent
+
+Question - The name server request
+Answer 
+Authority
+Additional
+
+This information is stored within the application layer PDU.
+
+DNS utilises a hierarchal structure.
+
+Root DNS points to TLD DNS.
+
+==DHCP SERVICES==
+
+DHCP assigns IP leases. if a device no longer requires an IP it will send a DHCPRELEASE message to the DHCP server to allow the server to re-instantiate this IP into its pool. this can be done proactively when shutting down a computer
+
+-Message Order-
+DHCPDISCOVER
+DHCPOFFER
+DHCPREQUEST
+DHCPACK
+
+-DHCPv6-
+SOLICIT
+ADVERTISE
+INFORMATION
+REQUEST
+REPLY
+

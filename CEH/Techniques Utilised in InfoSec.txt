@@ -1,0 +1,109 @@
+A form of system or item put in place to moderate (control and monitor someones access) mediate (prevent/authorise access to resources through systems such as Access Control Lists (ACLs)
+
+** Information Assurance **
+Refers to maintaining the confidentiality, integrity, availability and authenticity of information and information systems during, storage, processing, usage and transmission of data.
+
+The most important item of network defence is POLICY!
+
+As security environments constantly change in line with technological and organisational advancements it is essential to keep up so that security stays up-to-date and relevant.
+
+
+** Continual / Adaptive Security Strategy **
+To ensure streamline security improvement there are 4 network security approaches that help stay at pace with attackers strategies and advancements.
+The core of what we are protecting, detecting, responding and predicting is to protect A$$ET$
+
+- Prediction
+Threat analysis, penetration tests, vulnerability assessments
+
+- Respond
+Business continuity and disaster / incident response plans
+
+- Detect
+Threat monitoring.
+
+- Mitigate / Protect
+Defense-in-depth strategy, protect networks, data and endpoints.
+
+
+** Defense-in-depth **
+Complete defense in depth requires analysing not just technical aspects but also governance of an organisation
+
+Policies, Procedures and Awareness -> Physical -> Perimeter -> Internal Network -> Hosts -> Applications -> Data
+
+
+** RISK **
+Risk is an overall measure of probability / likeilhood and the impact of a vulnerability being exploited to an organisation.
+
+The higher the likelihood, the more likely it is to cause impact.
+The higher the impact, the more financially or operationally disruptional an attack could be.
+
+
+** Risk Management **
+The process of reducing and maintaining risk to an acceptable level defined by threat modelling. utilising an organisations risk appetite (the amount of risk an organisation is willing to take for potential
+business advantages. For example: investing in a new technology for the potential of gaining a larger market share) as well as threat tolerance, operational boundaries that define what is acceptible if a 
+vulnerability is exploited often measures through Recovery Point Objectives (RPOs) and Recovery Time Objectives (RTOs)
+
+This typically follows a 5 step process:
+1. Risk Identification - Identify, sources, causes, causes and potential other details of an internal or external risk.
+2. Risk Assessment - Assess the impact and likelihood of a risk to the organisation.
+3. Risk Treatment - Select and implement appropriate controls to mitigate identified risks.
+4. Risk Tracking - Performing continuous monitoring of implemented risks to track potential residual risks.
+5. Risk Review - Evaluating the performance of implemented risk treatment based on risk tracking.
+
+
+** Cyber Threat Intelligence **
+
+Cyber threat intelligence is the process of collecting and analysing information about known adversaries, tactics and procedures to better protect and mitigate risks, alongside turning
+unknown risks into known risks.
+
+== Long Term Use ==
+- Strategic
+High-level strategic information such as geopolitical tensions resulting in more state-sponsored attacks within a certain domain after discovering a new 0-day vulnerability within a widely utilised
+system such as a global threat landscape report. Consumed by high-level executives such as the CISO chief information security officer.
+
+- Tactical
+Information regarding adversaries TTPs, Tactics, Techniques and Procedures. Such as curated lists of Indicators of Compromise (IoC) or known C2 server IPs consumed by lower level technical staff
+such as security operations centers SOC or IT Service members.
+
+== Shorter Term Use ==
+- Technical
+Often grouped with tactical, however seperate in more matured defense strategies, these focus on the whats, such as IPs, IoCs, file hashes etc while Tactical focuses more on the How / TTPs
+
+- Operational
+Intelligence typically relating to groups, targetted sectors and techniques focusing on the mentioned organisation providing security analysts with prioritisation of alert investigation
+
+
+** Threat Intelligence Lifecycle **
+1. Planning and Direction - High-level strategic discussion for Intelligence Requirements (IRs) providing a roadmap of produced information and who will consume it.
+2. Collection - Gathering of raw data, SIEM logs, incident reports, network traffic and the INTs, HUMINT, dark web forums, SIGINT.
+3. Processing and Exploitation - Converting raw data into actionable reports / data ready for review through translation, decryption clearing of noise, structuring of data.
+4. Analysis and Production - Answering the who, what, why and when utilising processed data comparing to current reports providing complete, strategic, operational, technical and tactical reports.
+5. Dissemination (Spreading Information) and Feedback - Information deliverance to stakeholders requested in Planning and Direction.
+
+
+** Threat Modelling **
+1. Identification of security objectives - Identify the scope of the model, what systems are to be screened etc, who requires the dissemination
+2. Application overview - Surface level breakdown of application information such as actors (users who utilise the application) (the core infrastructure in use) (the actual stack in use)
+3. Decompose the application - Lower-level breakdown of infrastructure, looking at API endpoints, trust boundaries and  
+4. Identification of threats - potential outcomes including the who, what actor what group etc and the what, what type of attack will be used what infrastructure will be targeted etc.
+5. Identification of vulnerabilities - while vulnerabilities focus on the actual weakness within a system that is going to be exploited.
+
+** Incident Management **
+Incident handling and response is a 9 step process to effectively respond to threats.
+1. Preparation.
+2. Incident recording and assigment.
+3. Incident triage - assessment, and prioritisation of incidents, or alerts
+4. Notification
+5. Containment
+6. Evidence gathering and forensic analysis
+7. Eradication
+8. Recovery
+9. Post incident activities, documentation, impact assessments, policy reviews, investigation closure
+
+This is the EC council version, which is much more granular and business orianted in relation to the SANS or NIST versions which are more broad and focus more on the technical side of things.
+
+** AI & LLMs **
+LM Studio, allows you to run open-source AI models on your PC.
+Mistral 7B is a great model if you have a powerful desktop / laptop
+Hugging face community is a place where many open source AI models are stored
+

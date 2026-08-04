@@ -1,0 +1,62 @@
+Machine learning spots patterns within datasets, this is known as training
+
+Once training is complete it is known as an ML Model, these models can be fed new data sets for inference.
+
+# Inference is using the trained model to make predictions based on the pattern that it learned throughout its training.
+
+NLP - Natural Language Processing
+
+# AI Services
+Prebuilt ML Models designed for specific tasks
+
+# ML Services
+Develop your own AI models
+
+# ML Frameworks and infrastrcuture
+Build highly specialised AI models utilising your own architectures.
+
+# DEEP learning
+This is a process that utilise neural networks, taking the output of one logic gate and feeding it to the next.
+These deep learning models are pretrained on huge sets of data to create FOUNDATIONAL MODELS (FM). These are blueprints for creating generative AI
+
+Generative AI is capable of performing several tasks, unlike typical machine learning which is designed for a small amount of tasks.
+
+** SAGEMAKER JUMPSTART **
+Select from pre-trained foundational models, which can be trained using your own data.
+
+Accelerating model development
+
+** BEDROCK **
+fully managed service, allowing you to customise foundational models with your own data.
+
+Deploying highly performant AI models through a singular API.
+
+# Data lakes
+a resevoir where companies store all of their data. However this data is messy, and needs to be accessed and utilised efficiently.
+
+# ETL
+Extract, transform and load.
+Extact data from various systems and sources,
+Transform it into a standard format
+Load it into the program / service
+
+Amazon kinese and glue provide data ingestion
+s3 and redshift for storage
+EMR for Processing
+quicksight for loading and working with it.
+
+** DATA PIPELINES **
+Kinese data streams: Real time data streams with low latency processing to multiple data consumers
+DAta firehouse: Fully managed near real-time data streaming solution with batch data ingesting and encryption in transit
+
+AWS Glue: A fully managed metadata repository, it allows storing metadata about an organisations datasets. (acts like an SQL schema)
+EMR: Specualiused solution
+
+
+# Amazon Athena
+Fully managed, servelrless SQL query interface for data repositories
+
+# Amazon redshift
+fully managed complex query solutions for data warehouse solutions.
+
+# Amazon qui

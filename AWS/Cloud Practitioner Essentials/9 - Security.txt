@@ -1,0 +1,51 @@
+** AWS ACCOUNT STRUCTURE **
+
+Root User [Full Permissions]
+
+IAM Users, start with 0 permissions and require explicit allows (least privilege) [AWS IAM]
+
+IAM policies (JSON DOCUMENTS) this is how permissions are distributed to IAM users, similar to XACML.
+
+IAM Groups are groups of IAM Users.
+
+# IAM Roles
+They can have associated permissions, similar to groups and users.
+
+But they are designed for ephemeral permissions.
+
+
+** IAM Identity Centre **
+Centralised identity management with capabilities of providing federated (single credential, many services) access with single sign on
+
+** AWS Secrets Manager **
+Password manager, with automatied data retrieval
+
+** AWS Systems Manager **
+centralised remote control suite of servers in the cloud, EC2, edge devices or dedicated hosts.
+
+
+** NETWORK AND APPLICATION SEC **
+DDoS protection
+
+AWS Security Groups live at the AWS region level.
+
+# AWS Shield 
+it is built into AWS managed services. designed to stop layer 3 and 4 attacks, such as syn floods, udp replfl;ection or state-exhaustion. This lives at the global routing layer.
+
+AWS WAF filters incomingg traffic through DPI at the application layer
+
+
+** DATA SECURITY **
+AWS KMS allows you to rotate and distribute keys to specific roles.
+Amazon Macie allows you to mointor your sensitive data at rest to ensure its safe via ML and utomation S3 Only
+AWS Certificate Manager, allows you to manage, provision and deploy SSL/TLS certificates both on premise and in cloud.
+
+
+** DETECTION AND RESPONSE **
+Amazon Inspector - Automated security assessment # Vulnerable Instances, Deviation of best practices.
+
+Amazon GuardDuty - continuous monitoring of metadata and network activity and references cyber threat intelligence and ML to detect compromise / malicious activity
+
+Amazon Detective - Collects log data using ML to create visualisations of threats or kill chains over defined timelines.
+
+AWS Security Hub - View security and compliance state and aggregate finding from inspector, guard duty and detective

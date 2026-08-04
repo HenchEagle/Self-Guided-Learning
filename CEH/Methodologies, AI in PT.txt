@@ -1,0 +1,49 @@
+Hacking is the process of utilising and understanding a complex system of some form to make it perform in a way that it was not designed to do so.
+
+Advancments in AI have lead to more sophisticated cyber threats as hackers increasingly use Ai driven tools to enhance and automate their attacks presenting significant challenges to cybersecurity
+
+Ai is heavily leveraged within ethical hacking nowadays allowing secuirty professionals to outpace malicious actors, providing benefits
+such as: efficiency, accuracy, scalability and cost effectiveness inclucing locally hosted LLMs utilised for pentesting providing
+privacy and anonymity as no data is ever sent to the cloud organisation providing the AI model.
+
+shellGPT is a new tool that allows automation of several tasks such as gathering data from a large range of social media, forums, sites etc.
+as well as provide real time assistance.
+
+
+
+== LLM Capabilities, Ethical Hackers ==
+- Accelerating Analysis: LLMs can rapidly analyse large datasets, security logs or network traffic effectively and efficiently
+  identifying patters that could indicate breach or vulnerabilities. This enables ethical hackers to quickly detect potential
+  security issues before they escalate.
+
+- Scripting and Coding: LLMs possess the abilitiy to generate tailored codes, or provide assistance with the creation of code for 
+  penetration testing and security assessments.
+
+== LLM Capabilities, Black Hat ==
+- Used to generate sophisticated Social Engineering scripts or Phishing campaigns much more effectively than traditional methods.
+
+- Automatically generate exploits for targetted vulnerabilities.
+
+
+** Typical Attack Chain **
+1. Footprinting And Reconnaissance
+2. Scanning and Enumeration
+3. Vulnerability Analysis
+4. Maintaining Access
+5. Covering Tracks
+
+
+** Cyber Kill Chain Methodology **
+This provides a general guideline as to the phases of a comprehensive attack. If a singular stage of the kill chain is stopped or broken, the whole
+attack fails - this specifically applies to sophisticated attacks that reach for data exfiltration, and not simple viruses. if ransomware is
+delivered, files may potentially not be exfiltrated however can still be encrypted.
+
+Reconnaissance, Weaponisation, Delivery, Exploitation, Installation, Communication, Actioning on Objectives.o
+
+
+** Diamond Model of Intrusion Analysis **
+               Aversary 
+Infrastructure          Capability
+                Victim	
+
+By connecting the answer to all 4 of these points, you can get a very good idea as to what is happening on a system during an intrusion.

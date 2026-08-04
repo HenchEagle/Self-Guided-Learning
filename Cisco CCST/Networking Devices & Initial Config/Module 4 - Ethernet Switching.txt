@@ -1,0 +1,62 @@
+
+standards were developed to aid with network design in many ways.
+	- Facilitating Design
+	- Simplifying product development
+	- Promoting competition (among the same sector)
+	- Providing consistent interconnection
+	- Facilitate training
+	- Provide more vendor choices for customers
+
+The ethernet protocols determines how data is formatted and transmitted cross the wired network
+The ethernet standards specify how protocols at layer 1 and 2 should operate.
+
+IEEE - Institute of electrical and electronics engineering
+
+**Ethernet Frames**
+Ethernet operates at the physical layer (802.2 - resides at layer 2, controlling the logical link layer) 
+(803.3) resides at layer 1 physical (the physical media)
+it also coincides at layer 2 due to its control over MAC addressing.
+
+**LAYER 2 DATA LINK**
+layer 2 consists of 2 sublayers
+- logical link control (LLC)
+- media access control (MAC)
+
+==Logical link control==
+IEEE 802.2 sublayer communicates between networking software in the upper layer and the devices hardware at the lower layers. This is how multiple layer 3 protocols can utilise the same network interface and media
+
+==Media Access Control==
+IEEE 802.3, 802.11, 802.15 implemented in hardware responsible for data encapsulation and accessing media
+
+Ethernet frame - the internal structure of the ethernet frame
+Ethernet Addressing - ethernet frames include source and destination MAC for deliverance of ethernet packets across a local network
+Ethernet Error Detection - Ethernet frames include FCS (Frame Check Sequence) trailer for error detection
+
+==Ethernet Frame Fields==
+The minimum ethernet frame size is 64 bytes. and the expected maximum is 1518 bytes this includes all headers and trailers.
+
+Any frame less than 64 bytes is known as a "collision fragment" or "runt frame" while any frame larger than 1500 bytes in size is known as a "jumbo" or "baby giant frame"
+
+(Preamble 8 Bytes)
+Preamble & Start Frame Delimiter (SFD) [7 bytes] [SFD 1 Byte]
+(Rest 46 - 1518 Bytes)
+Destination MAC [6 Bytes] 
+Source MAC [6 Bytes]
+Type / Length [2 Bytes]
+Data Field [46 - 1500 Bytes]
+Frame Check Sequence (FCS) [4 Bytes]
+
+==Multicast MAC==
+IPv4 multicast mac = 01:00:5E
+IPv6 multicast mac = 33:33
+
+==Switch Learning & Forwarding==
+Every frame that enters a switch is checked for new information to learn. based on the port it came in through and the source MAC address. If the source MAC does not exist within the mac address table it is populated into the table along with the port it came through.
+
+When an entry is added to the table its refresh time is reset (usually 5 minutes). this timer indicates when the entry will be removed from the table
+
+If the port on which a MAC is connected to changes, it will be treated as a new entry and the old one will be removed
+
+If the destination MAC is a unicast MAC the switch will look for a matching MAC within its address table. If it is not found, it will forward the packet out of all ports apart from the incoming one.
+
+A switch can have multiple MAC addresses associated with a single port. This is common when a a switch is connected to another switch.

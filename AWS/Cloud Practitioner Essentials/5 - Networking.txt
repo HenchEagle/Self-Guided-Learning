@@ -1,0 +1,25 @@
+** VIRTUAL PRIVATE CLOUD (VPC)**
+It allows you to provision a logically seperated area of the cloud environment.
+
+# Gateway
+- Public Gateway: Wan Interface
+- Virutal Private Gateway: Private facing interface that allows you to create VPNs between on-premise servers and the cloud.
+
+# Additional Gateways
+- Transit Gateway: Allows connecting several VPCs and premises to create an intranet
+- NAT Gateway: Provides NAT for your internal services so they can make outbound connections.
+- API Gateway: Infrastructural middleware, forwards requests and implements authorisation, rate limiting, cors etc.
+
+* Direct connect provides you with a direct fibre connection to an AWS data centre.
+
+** HYBRID CLOUD CONNECTION OPTIONS **
+AWS Client VPN: Provides elasticity scaling based on VPN usage demands for remote workers to access cloud infrastructure.
+AWS Site-to-Site: simple, connect 2 geographical locations
+AWS PrivateLink: Similar to client-vpn, but instead for a member of a VPC to connect to another aws service or endpoint
+AWS direct connect: physical site-to-site fibre cable connecting premises to cloud deployments
+
+** PROTECTION IN THE CLOUD **
+Network ACLs - Stateless firewall rules, IPs and protocols [PERIMITER SECURITY] --- STATELESS
+
+Instance level networking security is achieved through security groups. [ENDPOINT SECURITY] --- STATEFUL
+

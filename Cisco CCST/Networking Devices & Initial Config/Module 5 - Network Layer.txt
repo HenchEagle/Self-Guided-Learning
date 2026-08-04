@@ -1,0 +1,19 @@
+==Functions of network layer protocols==
+1. Addressing end devices - every node is assigned a unique IP address for identification.
+2. Encapsulation - Encapsulated Layer 4 segments / datagrams with IP header information.
+3. Routing - Provides services for routing packets to a destination through the use of a router.
+4. De-encapsulation - When a packet arrives its header is checked to ensure the packet has reached the correct recipient
+
+==Characteristics of IP==
+Connectionless - IP protocol does not require any exchange of information to forward packets
+Best Effort - IP does not require additional fields in the header to maintain an established connection. this greatly reduces the overhead of IP but does not guarantee the recipient receives the packets.
+Media Independent - IP packets operate independently of the media they are transmitted across
+
+Maximum transmission unit (MTU) is the only characteristic that IP considers when transferring data across a medium. The MTU is the maximum size of a PDU that each medium can transport.
+
+This data is passed to the IP packet from the data-link layer, informing the IP the maximum size each packet can be
+
+Significant IPv4 Header Fields.
+1. Version - Signifies the IP version in use. (0100)v4 (0110)v6 [4 bit]
+2. Differentiated Services (DS) - Used to ensure QoS signifying packet priority. [6 + 2 bits]
+3. TTL (Time To Live) - 

@@ -1,0 +1,69 @@
+**Introduction**
+
+A wireless network, is a network that utilises radio signals to transmit data between devices.
+
+It provides the freedom of movement, and the ability to extend applications to different areas of the building, city or world.
+
+The first ever WLAN (Wireless Local Area Network) standard created by the Institute of Electrical and Electronics Engineering (IEEE) was the 802.11 Standard.
+
+
+**Wireless Communication Explained**
+
+Now this area took me around 30 minutes to wrap my head around. So I am going to try my best to explain it.
+
+Wireless data transfer is performed through electro magnetic (EM) waves, specifically radio waves.
+
+Radio waves operate at different bands, the current standards created by the IEEE operate at the 2.4GHz, 5GHz and most recently the 6GHz band.
+
+By band we are simply refering to the frequency of the electro magnetic waves. For example, 2.4GHz reffering to a wave frequency of 2.4 Billion per second.
+
+Now every single band has an allocated number of channels, these channels are blocks of 20 MHz. 
+Each channel allows for unoverlapping communication, or simultaneous communication without interference
+
+To understand this further, for example, the 2.4GHz band allows for communication of waves with a frequency between 2.4 and ~2.48GHZ. 
+Each channel within that range is allowed a maximum of 40MHz, either 2*20 MHz or 1*2 0MHz. As the band contains a total spectrum size of 180MHz.
+
+Although you may ask, why not 9*20 MHz.
+Well, each channel is only space 5 MHz apart. What i mean is C1: 2400-2420 MHz, C2: 2405-2415 MHz, C5: 2425-2445 MHz etc.
+Therefore channels between 1->4 are overlapping, while channel 5 is close enough to cause interference.
+To conclude, to have a clean communication on the 2.4GHz band you must utilise only 3 of the non overlapping channels, 1, 6 and 11.
+
+Below you can find a table of channel width, channel spacing, band size and spectrum size for each of the 3 standards.
+
+**2.4 GHz**
+Total Band Size: 180MHz (2400-2483.5 MHz)
+Allowed Channel Widths: 20, 40 MHz
+Channel Spacing: 5 MHz
+Total Non-Overlapping Channels: 3*20 MHz (1, 6, 11) or 1*40MHz
+Introducing IEEE Standard: 802.11 & 802.11b (Wi-Fi 1)
+
+**5 GHz**
+Total Band Size: 500 MHz (5.15-5.85 GHz) (150-200 MHz reserved for non WiFi uses.)
+Allow Channel Widths: 20, 40, 80, 160 MHz
+Channel Spacing: 20 MHz
+Total Non-Overlapping Channels: 25*20 MHz, 12*40 MHz, 6*80MHz, 2*160MHz
+Introducing IEEE Standard: 802.11a (Wi-Fi 2)
+
+**6 GHz**
+Total Band Size: 1200MHz (5.925-7.125 GHz)
+Allow Channel Widths: 20, 40, 80, 160, 320 MHz
+Channel Spacing: 20 MHz
+Total Non-Overlapping Channels: 59*20 MHz, 29*40 MHz, 14*80MHz, 7*160MHz, 3*320 MHz
+Introducing IEEE Standard: 802.11ax (Wi-Fi 6) with 802.11be (Wi-Fi 7 providing multi-link operations across all 3 bands.)
+
+Several IEEE standards operate across several bands. Which band can be utilised by your hardware is dependant on the IEEE standard being utilised alongside the software
+that is utilised for decoding the wireless data transfer. 
+
+
+**Radio Interference**
+Due to the nature of wireless communication, it is subject signal weakening and path loss as per their propegating properties. They are susceptible to influence from surrounding
+objects such as walls, furniture and people which can absorb, reflect and scatter the waves reducing the signal of the data transfer.
+
+Wireless communication is also affected by other radio signals, specifically those utilising the same / overlapping channels causing 2 waves of the same / similar frequency
+to travel on top of each other creating noise turning once intelligible data into corrupted or lost packets.
+
+**Wireless Antennas**
+Antennas are a key component of wireless communication. There are 2 primary types of antennas:
+
+- Directional      // Focuses the waves in a particular direction providing strong, long distance communication in 1 direction - weak communication past its 90-135 degree view.
+- Omni-Directional // Creates a generally equal signal both for receiving and sending data around it in a donut shape.

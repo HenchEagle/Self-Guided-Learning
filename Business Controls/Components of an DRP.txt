@@ -1,0 +1,29 @@
+When implementing any new application, system or software you must implement this along with a runbook and an appropriate backup and restore process
+
+a runbook is a detailed step-by-step guide that outlines procedures for IT teams to follow for common tasks and incident response.
+
+-+-+-+-+-+ COMPONENTS OF AN RDP -+-+-+-+-+
+
+** Backup & Restore **
+- Your backups are only as good as your test processes for your backup and restore.
+	Therefore you must test your backups & restores to ensure your plan if effective.
+	Create runbooks on the process, documentation regarding how to run the backup.
+		Have at least quarterly if not monthly backup tests to ensure your backups are up-	to-date and complete
+- Best practices for this are utilising idiomatic backups and atomic backups
+	Atomic backups refers to backing up a group of related datasets consistently at the same 	point to ensure data integrity, consistency and preventing data corruption.
+		Atomic backups are most often completed using idiomatic methods which automatically 		ensure all files are backed up at a certain snapshot / point in time.
+	
+	Idiomatic backups refers to not simply copying files from one location to another but rather 	utilising the industry standard / official backup tool for the software you are using as you 	are much more likely to end up with corrupted files trying to find a way to complete this 	task yourself.
+
+** 3-2-1 Backup **
+Just having a backup is still a vulnerable place to be in.
+
+The 3-2-1 backup strategy refers to having 3 backups, on 2 different media types, and 1 offsite copy.
+
+Now this offsite copy ideally is stored on an immutable or airgapped system. Immutable systems are the preffered way of doing this as these systems can only be written to and are not overwritable. on the other hand an airgapped system s one isolated from the network - however this is still vulnerable to physical attacks as files can be overwritten.
+
+** Infrastructure as code **
+This refers to the utilisation of code within configuration files to provision and manage IT infrastructure instead of manual processes
+
+Stafe, production and development environment should all be automated via the use of IaC. only time you should be manually configuring is potentially during the configuration of a test environment getting familiar with the tools you will be utilising.
+

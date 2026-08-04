@@ -1,0 +1,87 @@
+==Role of the Transport layer==
+The transport layer is responsible for the logical communication between applications running on different hosts
+It acts as the link between the application layer and the lower layers that are responsible for network transmission.
+
+1. Tracking Individual Conversations - Data flowing between source and dest applications is known as conversations
+2. Segmenting data and re-assembling segments - The transport layer breaks large data streams into smaller manageable transport layer blocks (segments / datagrams)
+3. Adding header information - Header information is used by dest host to reassemble the complete datastream, ensures 
+4. Identifying applications - The transport layer identifies what application should receive which datastream using port numbers.
+5. Conversation Multiplexing - Allowing other types of traffic to be interleaved into media to not use all bandwidth on one conversation.
+
+--TCP--
+TCP is known as a connection-orientated protocol as it establishes a connection to have a complete conversation, this provide the possibility for errorchecking, sending ack packets when datastreams re received. and resending packets that were not acknowledged.
+
+--UDP--
+UDP does not provide reliability and flow control therefore it requires less headers than TCP.
+UDP is known as best effort, same as IP. This means data transmission is not guaranteed to be successful
+
+UDP is utilised by applications that do not need guaranteed deliverance of data, but cannot tolerate delays.
+
+--Additional TCP Functions--
+Establishing Sessions - connection oriented protocol, establishing a permanent connection (session) between source and destination. devices negotiate the amount of traffic that can be transferred at a given time.
+Ensuring Reliability - Ensures that every segment sent arrives at its destination
+Same Order Deliver - re-orders packets that arrive at different times due to taking different pathways.
+Flow Control - if a hosts resources are being overtaxed, TCP can request that sending applications reduce the data flow.
+
+TCP is a stateful protocol - meaning it keeps track of the state of conversations. stateful sessions begin with a session establishment and end with session termination.
+
+TCP adds 20 bytes (160 bits) worth of header information to application layer data.
+
+--Port Numbers--
+The combination of src ip + src port & dst ip + dst port is known as a socket
+
+--Control Bits--
+Control Bits located just after the reserved field indicate the status and progress of a TCP connection.
+The control bits consist of six bits known as "flags" (flags are simply Boolean switches).
+
+The 6 flags / control bits are:
+URG - Urgent flag, signifies that this packet has priority for processing
+ACK - Acknowledgment
+PSH - Push function. Doesn't wait for the TCP stack buffer to fill before processing data. instead forwards all data stored within the buffer at that point in time.
+RST - Reset the connection
+SYN - Synchrnoise sequence numbers
+FIN - Finish, gracefully shutdown the connection.
+
+Sequence number is used for re-ordering and detecting missing packets.
+An (ISN) Initial Sequence Number is established at the start of a connection and is the staring number used to increment every transferred byte.
+
+--Acknowledgment--
+The sequence number indicates the byte that is being sent
+Acknowledgment umber indicates the next expected byte (sent by the server)
+
+A new feature of SACK (Selective ACK) must be agreed upon during the 3 way handshake. it allows host processes to request only the packets that were missing and not also receive duplicates.
+PCA - Transfer 10 segments
+PCB - Received 8 / 10 (missing 3 + 4)
+PCB -> ACK 3 (1+2) - SACK 5-10
+
+--Flow Control--
+TCP provides mechanisms for controlling the rate of data flow to reduce congestion.
+This is accomplished utilising the 16 bit field called window size.
+
+MSS = Maximum Segment Size (Bytes)
+
+E.G.
+During the 3 way handshake: window size = 10,000 | MSS = 1460
+
+Window size determines the maximum amount of bytes sent before an acknowledgment is required.
+The last byte PCA can send before having to wait for an acknowledgment is byte 10000. This is known as the send window. 
+
+The window size is included within every tcp packet so that the destination host can alter the maximum window size at any time depending on buffer availability.
+
+The destination host usually does not wait for the window size to fill before sending an acknowledgment and does it as it processes the data.
+
+--Window Sliding--
+A destination sending acknowledgments and the host adjusting the window size dynamically is known as window sliding.
+
+To overcome the 16 bit window size limit (65,535)
+A feature defined in RFC7323 known as Window Scale Option. allows for upto 1gb of data transfer.
+
+--Maximum Segment Size (MSS)--
+The typical MSS is 1460.
+
+This is because the standard MTU (Maximum Transmission Unit) for an ethernet interface is 1500 bytes.
+1500b - 20b (tcp header) - 20b (ip header)
+
+--User Datagram Protocol (UDP)--
+Connectionless and unreliable. Does not establish a connection before sending data. Data is not reassembled due to the lack of a sequence and acknowledgment number.
+Utilised for fast communications such as VoIP. 

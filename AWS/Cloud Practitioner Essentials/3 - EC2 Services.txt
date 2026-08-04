@@ -1,0 +1,57 @@
+Unmanaged Services      The customer is responsible for practically all the configuration and maintanence within the cloud. Only infrastructure is managed by AWS 
+    # TRADITIONAL IAAS
+
+Managed Services        More operational responsibilty is delegated to AWS [Elastic Load Balancing, Simple Notification Service, Simple Queue Service]
+    # IAAS + MAINTANENCE
+
+Serverless Services     All provisioning, scaling, availability is managed by AWS, you are responsibly only for the applications you are building.
+    # Function / Platform aaS
+
+** AWS LAMBDA **
+Function as a services
+
+Serverless service, allowing you to run a set of code based on an even trigger.
+Max execution time is 15 minutes
+
+processing data, generating reports anything really.
+
+** AWS CONTAINERS **
+Container Orchestrastion services provide control over the whole lifecycle of a Container, automatically scale out depending on resource demands.
+They also handle recovery, monitoring and updates.
+
+There are two main options
+
+ECS (Elastic Container Service)
+Streamlined and integrated with small configuration options like instance types and load balancers
+It is a fully-managed service
+
+EKS (Elastic Kubernetes Service)
+open source, a lot of control and flexibility but more complex
+
+ECR (Elastic Container Registry)
+Fully managed docker image registry. Container Orchestration tools can leverage these images to spawn containers.
+
+** PROVISIONING CONTAINERS **
+There are 2 options to provision them
+
+EC2 - Unmanaged container Orchestration
+
+Fargate - serverless container orchestration
+
+** DEPLOYING CONTAINERS **
+1. Deploy images to the ECR (elastic container registry)
+2. Choose an orchestration service based on needs (ECS - Small single apps with expected usage) (EKS - Larger, more complex, or high traffic applications)
+3. .Select a compute platform, ec2 for more control, fargate for agility and lower maintanence.
+
+** ELASTIC BEANSTALK **
+Simplified provisioning.
+
+Provide the service with your desired goals, infrastructure types and services and it will automatically build you cloud network while maintainin visibiliy and control
+
+** AWS BATCH **
+processing large datasets, machine learning or simulations
+
+Managed service, with automated scaling and parallel processing
+
+** Outposts **
+Provides hybrid cloud solutions porting aws services locally with consistency accross on premise and cloud

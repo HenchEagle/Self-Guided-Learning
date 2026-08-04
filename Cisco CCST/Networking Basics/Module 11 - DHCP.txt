@@ -1,0 +1,5 @@
+acquiring IP via DHCP.
+	- Client BROADCASTS DHCPDISCOVER (If the DHCP server is locate within a different subnet (logical location) a layer 3 device such as a router or multilayer switch can 		  act as a DHCP Relay. This converts the broadcast to a unicast and forwards the packet to the DHCP server.
+	- The server responds with a DHCPOFFER packet sent to the GIADDR (Gateway IP Address) that the DHCP relay encapsulated the packet with when it received the Discovery 	    	  broadcast. The DHCP Relay will then broadcast the packet on the appropriate subnet (with the clients MAC address encapsulated within the layer 2 frame)
+	- After receiving the offer - the client responds with a DHCPREQUEST packet selecting which IP it would like to receive (offers can come from multiple DHCP servers)
+	- Finally the client accepts the offer and is "officially" assigned the IP address through a DHCPACK packet from the DHCP server.

@@ -1,0 +1,84 @@
+** Windows Desktop vs Server Editions **
+Both windows server and windows client belong in the same OS family however differ on their prorities.
+
+Windows Client is an interactivity based system that wants an interactive UI, providing user features such as a gaming stack, "telemetry" and background service throttling (reducing CPU time and memory
+allocation to services that are not currently in use)
+
+Windows Server on the other hand focuses on providing services to large number of clients, therefore being optimised for scalability and stability over interactivity, multi-user configuration and
+high service uptime (24/7)
+
+The main difference between the two is that windows server is a role based operating system, providing different services "roles" such as DNS, DHCP, RBAC through AD, Web services through IIS etc.
+
+** NTFS Basics **
+This is the default file system utilised by Windows. It controls how data is stored, organised and retrieved on a disk.
+
+Think of NTFS as the manager of your files. It handles:
+- Files and Folders
+- Permissions
+- Disk space allocation
+- Recovery after crashes
+- Metadata
+
+** Files & Folder Permissions **
+NTFS supports detailed access control through Access Control Lists (ACLs)
+This can be assigned to groups to control utilising the following access controls:
+- Full Control
+- Modify (All but taking ownership or changing permissions)
+- Read & Execute (No writing or deleting)
+- Read (Read files)
+- Write (Write to files, No deleting)
+- Special Permissions (Granular Control of the above options)
+
+It is a journalling file system: Meaning it takes logs of everything before it commits any changes. In the case of a crash it can replay this log to improve recoverability.
+
+Alternate Data Streams (ADS) allows additional data to be hidden within files which can be viewed utilising dir /r and created via
+echo SecretMessage file.txt:secret.txt
+
+** Users, Groups & Permissions **
+Users are are SIDs (Security Identities). It represents a person or service as a "user" is simply an authenticated entity that interacts with resrouces.
+Groups are collections of Users (SIDs), also assigned a security indentity.
+
+Types of Users
+- Local Users	Exists only on the local machine
+- Domain User	Managed by Active Directory in enterprise environments
+- Built-In	Administrator (full control), Standard User (Limited Rights), Guest (Very Limited, Often Disabled)
+
+Groups are a form of Role-Based Access Control (RBAC). When a user is added to a group it inherits that groups permissions.
+
+Access Control Entries (ACEs) are inherited from their parent directories. (this can be broken if necessary)
+
+Access control is always decided by the most restrictive permissions. If a group has modify controls, but a user within that group has no Delete then that user will not be able to delete.
+
+** User Access Control (UAC) **
+UAC is an important feature implemented to prevent everything performed by a user having elevated privileges. Even an administrator does not automatically run everything as administrator
+when UAC is enabled. This can be enabled through: secpol.msc -> Local Policies -> Security Options -> User Account Control
+
+Internally windows creates 2 access tokens: Standard User Token and an Administrator Token (used only after elevation)
+
+** Services **
+Services are background processes that run under the operating system, typically without a user-interface, always-on and a common target for persistence.
+Services can be viewed via the Service Control Manager (SCM) (Services.msc)
+
+Services are typically stored inside of the registry in HLKM\SYSTEM\CurrentControlSet\Services where configuration detail is stored.
+
+** Event Viewer Basics **
+A built in tool designed for logging everything that happens on the Operating System, applications and security components in a centarlised interface. (eventvwr.msc)
+
+To start it is important to focus on these 3 log areas:
+System Log	If a machine is "acting weird"
+			Drivers Failing
+			Services Crashing
+			Hardware Issues
+			Boot / Shutdown Problems
+
+Applcaton Log	If an "App is broken"
+			App Crashes
+			.NET erros
+			Program Hangs
+			Service-Specific Failures
+
+Security Log	Security Analysis.
+			logons/logsoffs
+			failed login attempts
+			privilege changes
+			account lockouts

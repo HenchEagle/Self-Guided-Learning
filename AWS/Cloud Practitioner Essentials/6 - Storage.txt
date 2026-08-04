@@ -1,0 +1,59 @@
+** TYPES OF STORAGE **
+# Block (Elastic Block Store)
+Data is divided into pieces known as blocks, similarly to hard drives. You get direct, fast data access.
+
+# Object (S3)
+Stores data within objects, Object(data, ID, metadata). As it is an immutable object, creating edits requries rebuilding the whole object
+They are stored in flat structures known as buckets.
+
+# File (Elastic File System)
+Hierarchal system ideal for shared access such as content management systems.
+
+
+
+** Elastic Block Store & EC2 Instance store **
+EBS - Persistent
+Instance Store - Ephemeral
+
+# EBS LIFECYCLE
+EBS snapshots provide backups, they allow incremental
+
+Amazon data lifecycle manager allows you  to create policies that automate snapshot creation, retention policies and manage snapshot lifecycles
+
+
+
+** SIMPLE STORAGE SERVICE (S3) **
+Automatically provides redundancy. Mainly for storing static files that dont necessarily have to be super organised.
+
+Security: Private by default, access can be configured through bucket policies, or create ephemeral URL
+S3 also has audit logs.
+
+# Storage Classes
+S3 standard: general purpose storage class for frequent access, fast and affordable
+S3 Infrequent Access: cost efficient choice for things that arent accessed often
+S3 Glacier: Instant retrievel (fast but cheap). Flexible retrievel (slow retrievel, but very cheap) Deep Archive, (Very slow [12 hours], very cheap)
+
+One Zone: Single availability zone storage, with lower durability at lower costs.
+
+Lifecycle policies allow you to move data between classes.
+
+** ELASTIC FILE SYSTEM **
+Linux based file share, similar to SMB for Windows with automated scaling and replication.
+
+unlike EBS, EFS can be accessed from several instances within different availability zones
+
+# Amazon FSx 
+A fully managed storage service that utilises high-end compute for great performance providing support
+for many different filesystems, windows, lustre, zfs etc.
+
+** Storage Gateways **
+S3 File Gateway
+Volume Gateway
+Tape Gateway
+
+Excellent disaster recovery, local volumes or tapes can be automatically backed up to the cloud
+
+Elastic Disaster Recoveery
+
+S3 can be used for static web hosting too!
+

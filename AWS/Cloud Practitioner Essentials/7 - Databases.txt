@@ -1,0 +1,19 @@
+AWS DMS (Database migration service) provides options to "lift and shift" (migrate) your on premise DBMS to the cloud.
+
+Amazon RDS (Relational database service)
+provides several database engines with additional Benefits
+- Automated patching, failover, redundancy and backups.
+
+Amazon Aurora
+is around 3x faster than RDS, at a 20-30% markup with much quicker failover with auomated
+
+** NoSQL DB Services **
+Amazon DynamoDB. Excellent for super fast querying, non-relational schemas and seamless scaling through a serverless service.
+
+Best for unstructured data like IoT, real time feeds with varying outputs or ecommerce carts.
+
+** Amazon ElastiCache **
+Store frequently queried data from a database within memory rather than on disk for near-instantaneous access.
+
+Reduces operational overhead and can save money allowing to use smaller more economic DB instances
+

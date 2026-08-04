@@ -1,0 +1,21 @@
+An effective threat modelling team requires a dedicated team including:
+	- Threat Intelligence
+	- Asset Identification
+	- Mitigation Capabilities
+	- Risk Assessment
+
+A framework to help with threat modelling that is relevant to this day is STRIDE (Spoofing Identity, Tampering with data, Repudiation Threats, Information Disclosure, Denial of service & Elevation of priviliges)
+
+A breach of security is known as an incident
+
+The process of remediating the incident is known as incident response
+
+Incidents are responded to by a team known as CSIRT (Computer Security Incident Response Team)
+
+Incident Response usually consists of 6 phases:
+	- Preparation - Do we have the resources and plans to deal with this incident
+	- Identification - Has the threat and threat actor been correctly identified
+	- Containment - Can the threat be secured to prevent further damage to systems and to restrict lateral movement
+	- Eradication - Removing the threat
+	- Recovery - Performing an evaluation of the attack and ensure the business can return to full operations
+	- Lessons learned - re-evaluation of what caused the incident and how this can be prevented in the future.

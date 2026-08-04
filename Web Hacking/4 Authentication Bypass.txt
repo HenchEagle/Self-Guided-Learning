@@ -1,0 +1,17 @@
+**
+methods of bypassing website authentication
+
+
+a useful exercise to complete when trying to find authentication vulnerabilities is creating a list of valid usernames
+
+ffuf
+-w -> wordlsits [you can define multiple wordlists with the following syntax]
+		-w wordlist1.txt:W1,wordlist2.txt:W2
+-X -> request type, by default requests sent are GET requests, when submitting to forms you have to use -X POST
+
+-H -> specify headers, the correct header for a submission form can be found by submitting to the form and viewing the request within the network tab
+
+-u -> specify url / host
+
+-fc -> filter response code, by filtering -fc 200 on a submission form, it will skip any interactions that do not lead to a 302 code [redirection]
+

@@ -1,0 +1,22 @@
+The roles of networks has changed from data-only to intercommunication therefore there are 4 standard principles that network architects must consider to meet customer needs.
+
+- Fault Tolerance
+- Scalability
+- Quality of Service
+- Security
+
+**Fault Tolerance**
+Implementing redundancy so that if one or more devices stop functioning the performance / operations of the network are not impacted.
+
+**Scalability**
+Implementing a rigid architecture from the start of creation to ensure the network can be easily expanded.
+
+**Quality of Service (QoS)**
+Ensuring the quality of the service is reliable, with minimal down time, primarily focused on bandwidth and downtime. If services go down due to running out of bandwidth (congestion) customers will switch to more reliable service providers.
+Routers can manage QoS by implementing rules to prioritise more important data packets such as VoIP over a web page.
+
+
+**Hierarchical Network Design**
+Core Layer
+Distribution Layer
+Access Layer

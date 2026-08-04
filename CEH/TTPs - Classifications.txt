@@ -1,0 +1,54 @@
+For a cyber incident to be recognised as an attack it requires 3 seperate things to be present.
+- A goal, or a motive for the attack.
+- The method that was utilised for the attack to take place. (TTP, Tactics, Techniques and Procedures)
+- A vulnerability that was exploited during the attack.
+
+
+
+** Tactics, Techniques and Procedures (TTPs) **
+This term refers to the patterns of activities and methodoligies utilised by threat actors, or groups of threat actors.
+
+== Tactics ==
+A strategy utilised by a threat actor to achieve the attacks motives
+
+== Techniques ==
+The technical methods that were utilised by an attacker to achieve results during the attack.
+
+== Procedures ==
+The systematic approach, through decomposition and pattern recognition utilised by the threat actors to launch an attack.
+
+Analyising attack chains provides organisations with a fingerprint of a threat actor. This will show them what techniques
+and strategies that they utilise, specifically for detecting repeat attackers.
+
+
+
+** Classification of Attacks **
+== Passive Attacks ==
+These attackss do not tamper with, send or involve any type of data manipulation. Also referred to as passive reconnaisance. Examples
+of this are sniffing and eavesdropping (the general act of listening to communication)
+
+== Active Attacks ==
+Tampering with data in transit, disruption of communications or attempts to bypass or break into secure systems. Examples include:
+DoS, MitM, Session Hijacking and SQL Injection
+
+== Close-in Attacks ==
+This is a technique where attackers are in close physical proximity to a network, in order to gather, modify or disrupt access to information.
+Examples include: social engineering, shoulder surfing or dumpster diving.
+
+== Insider Attacks ==
+Utilising privileged access to intentionally cause disruptions or pose a threat to organisations. Examples include: theft, keylogger planting, backdoors
+or malware.
+
+== Distribution Attacks == 
+Distribution attacks are ones that occur when attackers tamper with hardware or software prior to installation. A prime example if this was when a 
+popular system utility for fan configuration had a certain install shipped with malware. Attackers tamper with the hardware of software at its source
+or in transit.
+
+
+
+** Information Warfare
+The term information warfare or InfoWar refers to utilising Information and Communication Technologies (ICT) to gain a competitive advantage
+over an opponent.
+
+There are always 2 sides, known as red team and blue team in a Defensive Warfare standpoint, focusing on prevention, deterrence, detection, and response.
+While offensive warfare focuses on different types of attacks, system hacking, MitM, web service attacks, malware etc.

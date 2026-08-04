@@ -1,0 +1,5 @@
+A monolith is a large application / piece of software often built upon old architectures or outdated programming languages, with
+lots of redundant logic that is not designed for portability. These services must be fully ran on a singular process requiring hardware
+to match the required compute of the service. This is often expensive and complex. The only real scalability tactic is outwards scaling,
+(direct replication of the service on another machine) This is also costly, introduces complexity and requires additional features like
+load balancing.

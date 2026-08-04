@@ -1,0 +1,14 @@
+ARP address resolution provides 2 basic functions
+
+Resolving ipv4 to mac address
+maintaining a table of ipv4 to mac address mappings
+
+The mac addres table is stored temporarily within the RAM known as the ARP cache.
+
+The relation between a MAC address and an IP is known as a map.
+
+ARP Requests are sent when a device does not have a mapping for a specific IP address within its cache. these mappings are timestamped and dropped if an ARP reply is not received within a certain amount of time.
+
+ARP Cache mappings expire and are removed after 15-45s on newer windows distributions.
+
+IPv4 Type field for ARP: 0x806

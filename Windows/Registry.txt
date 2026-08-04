@@ -1,0 +1,76 @@
+The Windows Registry is a hierarchal database used by windows to store information on the following:
+- OS configurations
+- Hardware confgiurations
+- Software settings
+- User preferences
+- Security policies
+- Service configurations
+- Driver settings
+- Startup programs
+- Authentication information references
+- Event logging settings
+
+** The Structure **
+Windows AD is structured in 4 subsections
+Hive - The top level directory | HKEY_LOCAL_MACHINE
+Key - Folder | Software
+Subkey - Subfolder | Microsoft/Windows
+Value - File/data entry | False
+
+HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/Entry=False
+
+** How it relates to Active Directory **
+When a computer joins an Active Directory Domain its domain policies and settings are typically applied through the regisry
+
+** Important Information **
+All registry files exist on the disk.
+System Hives		%SystemRoot%\System32\Config
+User Hives (HKCU)	%UserProfile%\NTUSER.DAT
+
+** Critical System Keys **
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet	Boot, Services, Hardware Info
+HKEY_LOCAL_MACHINE\SOFTWARE			Installed software & Configurations
+HKEY_CURRENT_USER\Software			User-Specific Software Settings
+HKEY_CLASSES_ROOT				File Type Associations, COM Objects
+
+** Types of Registry Values **
+REG_SZ		String Value
+REG_DWORD	32-bit Number
+REG_QWORD	64-bit Number
+REG_BINARY	Raw Binary Data
+REG_MULTI_SZ	Multiple Strings (Data)
+REG_EXPAND_SZ	String with environment variables (%PATH%)
+
+** Major Registry Hives **
+HKEY_LOCAL_MACHINE	HKLM
+HKEY_CURRENT_USER	HKCU
+HKEY_USERS		HKU
+HKEY_CLASSES_ROOT	HKCR
+HKEY_CURRENT_CONFIG	HKCC 
+
+** HKEY_LOCAL_MACHINE **
+Machine wide settings (applied to all users) critical for:
+	Services
+	Drivers
+	Security Settings
+	Installed Software
+	SAM Database References (Security Accounts Manager) database HKLM\SAM. It stores local usernames, Password hashes, SIDs (Security Identifiers), Account Policies
+
+Cybersecurity relevance:
+
+Service abuse
+Driver persistence
+LSA secrets
+Credential dumping
+Autoruns
+AV configurations
+
+** HKEY_CURRENT_USER **
+	Desktop Settings
+	Mapped Drives
+	User Run Keys (Startup Apps - User Only). There are also machine wide run keys which startup automatically without regard to who is utilising the device.
+
+This is not an independant registry like others. It is loaded into memory by the operating system when a user logs in. It is a view into a users NTUSER.DAT file stored @
+C:\Users\<username>\NTUSER.DAT
+
+

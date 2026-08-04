@@ -1,0 +1,9 @@
+All hosts can be configured as clients, servers or both - this is all determined by the software that is installed on the system
+
+Client & Server Examples - How they are ran.
+Email Servers - Email server runs email server software, client utilises a mail client software such as Microsoft outlook or gmail.
+Web Servers - web servers run web server software such as apache or Microsoft propriertary IIS (Internet information services)
+File Servers - The file server stores corporate and user files in a centralised location while clients access these files with client software such as file explorer.
+
+Peer-to-peer applications
+p2p applications allow devices to act as both the client and server simultaneously within the same communication. for example a form of messaging services allows all clients to receive messages but also to send requests/messages to other clients of the communication.

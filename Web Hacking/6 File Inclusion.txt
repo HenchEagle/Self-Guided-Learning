@@ -1,0 +1,17 @@
+**
+Local File Inclusion - a security vulnerability within web applications that involves the attacker utilising files from their local file system by manipulating input fields to retrieve sensitive files or execute malicious code.
+
+Remote File Inclusion - a security vulnerability within web applications that allow hackers to include malicious files from remote servers, by injecting URLs into input fields - allowing them to execute arbitrary code on the target server
+
+Directory Traversal - utilising search queries to traverse from the web root directory to the file systems root directory. for example 
+https://example.com/view.php?file=../../../etc/passwd
+
+the structure of a url.
+
+       domain name        paramaters
+           v               v
+http://webapp.thm/get.php?file=userCV.pdf
+ ^                  ^
+protocol           file
+
+if remote file inclusion is possible, you can run a http server locally serving on your localhost under port 8000 utilising python -m http.server

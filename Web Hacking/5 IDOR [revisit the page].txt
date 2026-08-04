@@ -1,0 +1,20 @@
+IDOR - Insecure direct object references.
+	- a type of access control vulnerability that arises when an application uses user supplied input to access 	  objects directly
+
+basically being able to access information, that the user should not have access to due to improper authentication.
+
+when data is passed from page to page, web developers typically encode the raw data into base64.
+	- Encoding is done to ensure that the server is capable of interpreting the data by converting binary data
+	  into ascii strings.
+
+base64decode.org || base64encode.org
+
+IDs can often be hashed, this is to prevent the reversal of the data being passed between pages. If you ever discover
+any md5 hashes it is worth putting it into crackstation.net which contains a database of billions of hash to value
+results to see if any of them match.
+
+
+
+
+
+

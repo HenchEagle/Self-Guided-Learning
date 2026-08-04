@@ -1,0 +1,44 @@
+Packets are handled at the network layer (L3), they contain information such as the IPv4 header and IPv6 header, along with the payload.
+Frames are handled at the data-link layer (L2), packets are "encapsulated" with additional data such as MAC address
+
+Encapsulation is the process of wrapping a packet into a frame, making it capable of being transmitted along a local network
+
+TCP/IP Stack
+Application
+Transport
+Internet
+Network Interface
+
+
+** Crucal TCP IP Headers **
+Source Port            | Randomly selected port on the local network (0-65535) to send the data on
+Destination Port       | Not randomly selected port, opened by client specifically for communication - most likely TCP port 80
+Source IP              | IP address of client
+Destination IP         | IP address of server
+TTL                    | Time-To-Live
+Version                | IP version in use
+Sequence Number        | Used to ensure integrity within data stream re-assembly
+Acknowledgment Number  | Initial Sequence Number +1 to ensure that server/client have the correct sequence number
+Checksum               | Integrity check
+Data                   | The actual payload.
+Flag                   | additional parameters, also sometimes known as options
+
+
+** Three Way Handshake **
+SYN     | The initial packet sent by the client to indicate it wants to begin a TCP connection and begin synchronisation.
+SYN/ACK | The server sends a Synchronisation + Acknowledgment packet to indicate that it recognises the clients SYN and indicate readiness to start communication
+ACK     | The client sends an acknowledgment packet to confirm the connection was successful.
+DATA    | Once a connection has been established data such as files or bytes are sent within DATA packets
+FIN     | A packet sent to gracefully close a connection indicating finished communication
+RST     | A reset packet sent to abruptly terminate connection, often due to error or resource issues.
+
+
+** Sequence Numbers **
+SYN     | Here is my initial sequence number to SYNchronise with (0)
+SYN/ACK | Here is my initial sequence number to SYNchronise with (5000). And I ACKnowledge your ISN (0)
+ACK     | I ACKnowledge your ISN (5000) here is some data with my ISN + 1 (1)
+
+
+** TCP Closing A Connection**
+TCP will close a connection once the sending device determines the all data has been successfully received by the other device.
+To initiate the closure of a connection the client will send a FIN packet. of course with TCP, the server must acknowledge this.

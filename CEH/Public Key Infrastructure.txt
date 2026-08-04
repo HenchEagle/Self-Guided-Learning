@@ -1,0 +1,42 @@
+**Introduction**
+A Public Key Infrastructure (PKI) is a method of maintaining non-repudiation within an organisation.
+It is a collection of software, hardware and services providing the ability to issue, manage and revoke digital signatures
+
+
+**Key Components of a PKI**
+- Certificate Authority
+  A trusted entity that is responsible for issuing and signing digital certrificates.
+  This entities signature is what provides the trust behind a certificate.
+- Registration Authority
+  A registartion authority acts as a middleman confirming the identity of clients requesting digital certificates.
+  This prevents malicious or non reputable individuals / businesses from obtaining certificates from reputable CAs
+- Digital Certificates
+  A digital piece of documentation containing information about the owner of a digital certificate, typically containing information such as:
+  Subject name, the corresponding public key, certificate usage settings
+- Public & Private Keys
+  Private keys are utilised to prove that an individual / service controls a digital certificate. It's like cross referencing a signature on a collectible with images of an original but with 100% guarantee.
+  Public keys are utilised for encryption and verification of private key signatures.
+- Certificate Repository & Database
+  This is where digital certificates of all types are stored. Utilised by the Online Status Certificate Protocol (OSCP) - it also utilises Certificate Revokation Lists (CRLs)
+  It provides a complete list of all certificates alongside their signing statuses "good", "revoked" and "unkown"
+- Validation and Revocation
+  As mentioned previously, this is performed by the OCSP which is a Layer 7 protocol running off HTTP. These communications do not require encryption
+  because the data being transferred by this protocol is designed for integrity and authenticity.
+- Certificate Management System 
+  
+
+The process to achieve complete organisational non-repudiation specifically for physical documents requires several steps. 
+This complete form of non repudiation is referred to as a chain of trust, for document signatures its reffered to as a Qualified Electronic Signature (QES)
+
+**The 3 components for achieving a complete QES:**
+
+- Private key stored on physical hardware requiring a form of authentication to access by the singular named employee such as PIN or Biometric.
+- Policies in place that require the individual to sign a contract stating the digital signature is the sole responsibility of safekeeping for the 
+  named individual.
+- Comprehensive, immutable logging that states files have complete integrity by not being edited by anyone other than the signed individual,
+  typically achieved by storing a log of the individuals network activity with timestamps.
+
+This is repeatable for areas such as Qualified Electronic Authentication (QEA) utilising 3 similar pillars, however not common in practice
+for organisations due to the nature of having to re-enter these biometrics / pins every single time an individual attempts to access a protected
+service such as VPN or website to prove sole control over the device. Therefore these services typically just utilise a standard digital certificate.
+That doesn't provide complete legal non-repudiation, however sufficient logs that this user account accessed this service, at this time.

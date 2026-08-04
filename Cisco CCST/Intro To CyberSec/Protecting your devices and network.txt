@@ -1,0 +1,16 @@
+Wi-Fi enabled devices connect to networks through the way of preset network identifiers known as | service set identifier (SSID)
+
+Strong Password Minimums
+	- Do not use dictionary words
+	- Do not use common misspelling of disctionary ords
+	- Utilise special characters
+	- Do not use computer or account names
+	- At least 10 characters longs
+
+Passphrases are more effective than passwords. utilising statements that are meaningful and adding special characters. such as
+Ac@t th4tl0v3sd0g5.
+
+This makes it easy to remember while being hard to brute force. ensure to avoid common or famous statements
+
+WPA2 IS WEAK BECAUSE OF KRACK
+https://www.krackattacks.com/

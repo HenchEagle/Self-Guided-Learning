@@ -1,0 +1,35 @@
+Networks installed within small offices / home are known as Small-Office / Home-Office (SOHO) they allow users on small networks to share resources such as printers
+
+Business and SOHO networks provide a shared connection to the internet. The internet can be referred to as a "network of networks"
+
+Types of local networks
+	- Small Home Network
+	- Small office / home office
+	- Medium to large networks
+	- world wide networks (internet)
+
+Types of mobile devices
+	- Smartphones
+	- Tablets
+	- Smartwatches
+	- Smart Glasses
+
+Connected Home Devices
+	- Security systems
+	- Appliances
+	- Smart TV
+	- Game Consoles
+
+Other Connected Devices
+	- Medical devices
+	- smart cars
+	- RFID tags	
+	- Sensors and actuators
+
+Bandwidth - The amount of bits that can reach a destination simultaneously.
+Throughput - Bandwidth with latency considerations measures in bits per second
+
+Transmission Media Types
+	- Optical (fiber optic)
+	- Electrical (Copper Cable)
+	- Radio Waves (Wi-Fi)

@@ -1,0 +1,10 @@
+Limited Broadcast - local subnet only broadcast sent to 255.255.255.255 routers do not forward it.
+Directed Broadcast - sent to a particular subnet converting all host bits into 1s. e.g. 192.168.0.255. A router takes an IP broadcast and converts it into a layer 2 broadcast.
+
+Unicast - 1:1 packets are sent from the source to the destination
+Multicast - 1:Multiple packets are sent to a multicast IP address ranging from 224.0.0.0 - 239.255.255.255.
+	Only computers "subscribed" to the same multicast group will receive the packets. These are known as multicast clients. an example of the usage is OSPF within routers
+	Allowing routers to communicate only with other routers subscribed to the same multicast utilising the OSPF protocol
+
+IANA - Internet Asigned Numbers Authority
+RIR - Regional Internet Registries

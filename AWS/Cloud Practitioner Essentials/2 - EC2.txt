@@ -1,0 +1,69 @@
+** EC2 INSTANCE TYPES **
+All instances are grouped under families, providing varying combinations of cpu, memory, storage
+and networking capacity
+
+The types of instance families are:
+- General Purpose
+	Balanced Approach
+	Good start if resource requirements are unkown
+
+- Compute Optimised
+- Memory Optimised
+- Accelerated Computing
+- Storage Optimised
+
+** PROVISIONING EC2 RESOURCES **
+You can interact with AWS services through 3 methods.
+- Graphical Management Console
+- AWS CLI
+- AWS SDK (Software Development Kit)
+
+** PRICING **
+- On-Demand: Pay for the duration of the instance it runs (/hour, /second)
+- Savings Plans: lower prices, for a commitment to a certain amount of usage /hour (1 year / 3 year) 72% off (RESERVED INSTANCES)
+- Spot Instances: Request spare EC2 capacity (They can reclaim these instances when they are needed) 90% off
+- Dedicated Hosts: Bare metal hardware (increased security, compliance and noisy neighbour prevention)
+
+** DEPLOYMENT **
+- Crucial to include redundancy through duplicate EC2 services deployed accross different AZs (Availability Zones)
+- EC2 auto-scaling allow for automatic provisioning of new instances when demand increases - and automated decommision when
+demand decreases.
+- Amazon CloudWatch allows you to monitor the performance of your instanced to determine when scaling needs to happen.
+
+** ELASTIC LOAD BALANCING **
+Provides no need for maintanence as it is managed by AWS unlike other load balancing / reverse proxy flavours
+
+## Types of load balancing
+- Round Robin
+- Least Connections
+- IP Hash
+- Least Response Time
+
+** Messaging and Queuing **
+Amazon SQS (Simple Queue Service)
+
+This essentially works like asynchronous programming in python.
+Asyncio.create_task() - Frontend request
+Asyncio.Queue() - Coroutines waiting to be processed (Tasks stored in queue by the frontend)
+
+This stops the backend from being overloaded, and allows you to utilise the SQS as a metric for auto scaling.
+
+in SQS this buffer (asyncio.queue) is known as messaging and queueing.
+
+## Coupling
+
+# TIGHT COUPLING
+If backend applications do not utilise queue and communicating directly with each other, this is known as being tightly
+coupled.
+
+Tight coupling lacks availability / redundancy, if one system fails, another component or the whole system can
+stop functioning
+
+# LOOSE COUPLING
+Buffers and queues.
+
+
+Amazon SNS (Simple Notification Service) # Another solution for elimination of tight coupling
+
+EventBridge
+

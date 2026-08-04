@@ -1,0 +1,4 @@
+Threat Modelling - The process of reviewing, improving and testing a companies security protocols within their information technology infrastructure and services
+
+Bell lapuda model - Access control model focus on confidentiality - no read up, no write down
+Biba Model - Access control model focused on integrity - no write up, no read down.

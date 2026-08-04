@@ -1,0 +1,19 @@
+Site Review Acme IT Support
+
+Gobuster can be used to search for all of the potential interesting ones.
+
+Feature 	URL 			Summary
+Home Page	/			Home page displaying the summary of their website and their team
+Latest News	/news			Directory containing the latest news for their company, articles are stored @ /article?id=x
+News Post 	/news/article?id=1	Summary of their services, IT support - have staff with 3 years of experience
+Contact Page	/contact		Contact page with submission form
+Login Page	/customers/login	Login input form
+Registration	/customers/signup	Registration input form [username + email + password]
+Customers	/customers		Redirect to /customers/login
+Reset Splash	/customers/reset	Input page for password reset [email]
+
+When submitting a form, the network tab can reveal potential AJAX resubmissions that can lead to potentially uncontrolled sites.
+Screens that utilise css can often be altered to no longer appear.
+Viewing the inspect of a page does not always display all the information. page-source:https will view the full source.
+the source/debugging tab contains all the files that are being loaded by the web page, here we can view if there are any files that contain information that should not be publicly available
+

@@ -1,0 +1,37 @@
+Threat Domain - An area of control, authority or protection that attackers can exploit to gain access to systems.
+
+User Domain - anyone with access to an organisations information systems, including employees, contract partners and customers.
+
+Application Domain - All critical systems, applications and data an organisation utilises to support operations. 
+
+Cyber threats are organised into different categories to allow organisations to assess the likelihood and impact of them to be able to prioritise security efforts.
+
+--Threat Intelligence & Research Sources--
+- Dark web
+- Indicators of compromise (IOC)
+- Automated Indicator Sharing (AIS)
+	- Cybersecurity and infrastructure Security Agency (CISA) capability
+	- It enables real-time exchange of cyber threat intelligence (CTI)
+	- Done by utilising a standardised CTI sharing structure language | Structured Threat Information 	  Expression (STIX) or...
+	- Trusted Automated Exchange if Intelligence Information
+
+--Deception--
+
+There are many types of social engineering:
+	- Pretexting (lying to gain personal or financial data)
+	- Quid pro Quo (Requesting personal information in return for a gift)
+	- Identity Fraud (Utilising a stolen identity to obtain goods or services in their name)
+
+7 Social Engineering Tactics:
+- Authority
+- Intimidation
+- Consensus
+- Scarcity
+- Urgency
+- Familiarity
+- Trust
+
+--Impersonation & Hoaxes--
+
+--Domain name System--
+DNS Spoofing / DNS Cache Poisoning - https://www.youtube.com/watch?v=g-XZpTxusS8 Watch and replicate

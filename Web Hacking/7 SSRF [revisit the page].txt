@@ -1,0 +1,8 @@
+SSRF - server side request forgery
+
+Done by manipulating the server into requesting a different endpoint as to the intended one potentially revealing data that is not meant to be visible.
+
+SSRF vulnerabilities can be spotted in multiple different ways
+	- if a full URL is used within the parameter of an address bar
+	- A partial URL such as the hostname 'api', 'etc'
+	- Or a path of the URL such as '/forms/contact'

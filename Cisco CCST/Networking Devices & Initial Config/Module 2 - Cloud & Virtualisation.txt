@@ -1,0 +1,27 @@
+Public Cloud - Publicly available infrastructure that can be offered for free or on a pay-as-you go basis such as cloud storage like google drive.
+
+Private Cloud - Privately owned infrastructure dedicated exclusively to a single organisation. this infrastructure can be on and off premises
+
+Hybrid Cloud - A combination of private and public cloud, such as private for sensitive information and public for normal data.
+
+Community Cloud - Similar to public cloud, but designed for a specific group of organisations. for example health organisation must comply with certain legislations so their cloud software will be designed with this in mind.
+
+When servers are underused and sit idle for a long amount of time, wasting energy and taking up more space than warranted by the amount of services it provides is known as server sprawl.
+
+**WHY VIRTUALISATION**
+- Less equipment required
+- Lower energy costs
+- Less physical space required
+
+There are two types of hypervisors
+--Type 1--
+"Bare Metal" Approach
+	- The hypervisor is installed directly onto the hardware, then instances of OSs are installed onto the hypervisor. 
+	- This makes them more efficient than hosted architectures.
+
+--Type 2--
+"Hosted" Approach
+	- Software that creates and runs VM instances such as VMWare Workstation
+	- The computer on which the Type 2 hypervisor runs on is known as the host machines, type 2 hypervisors are also known as hosted hypervisors.
+
+The advantage of type 2 over type 1 is that management consoles are not required.

@@ -1,0 +1,44 @@
+**
+/robots.txt contains a list of directories that are allowed/disallowed to be crawled by search engines.
+
+many frameworks provide default favicons which can provide information on what framework was used to create a website.
+https://wiki.owasp.org/index.php/OWASP_favicon_database
+this owasp list contains a large list of common framework favicons
+
+to search the favicon within the database you need to get the md5 hash of the .ico
+
+this can be done by curling the url that leads to the favicon and piping it into the md5sum command on Linux
+curl <target_favicon_url> | md5sum
+
+
+**
+/sitemap.xml on the other hand contains a list of every file that the website owner wished to be listed on a search engine
+
+**
+When making requests to a webserver, it returns various HTTP headers, these headers can sometimes contain useful information relating to the software and potentially programming language in use.
+
+curl -I provides the headers as well as curl -V. im unsure as to what -v does, but it display a bit more information and supposedly forces the browser to use HTTP/2 protocol
+
+**
+OSINT (Open-source intelligence)
+Google dorking (google hacking) a way of performing more advanced searches. (site:tryhackme.com filetype:pdf inurl:login)
+
+Wappalyzer, performs a scan of a website and returns information pertaining frameworks, versions, Content management systems +
+
+Waybackmachine https://web.archive.org/ - contains a historical archive of websites dating to the 90s
+
+GitHub - Git is a version control system, it allows teams to track changes made to files, commiting them to repositories with messages so that everyone knows exactly what was changed. you can search companies and websites for potentially unhidden content.
+
+S3 Buckets - amazon aws cloud services can sometimes have incorrectly setup authorisation. the format for s3 buckets is s3.amazonaws.com you can find these types of urls through page source, GitHub repos or through automation - utilising common search terms such as {name}-assets, {name}-www, {name}-public, {name}-private.
+
+Automated Discovery -
+wordlists are text files that contain a large amount of commonly used words that can be used for many different cases. subdomains, passwords, directory and file names
+https://github.com/danielmiessler/SecLists - many wordlists
+
+3 common automation tools for directory discovery, i believe they are also capable of other functions such as subdomain discovery
+	- Gobuster
+	- ffuf
+	- dirb
+https://imgur.com/a/srmrhpe - FFUF
+https://imgur.com/a/OjCGytY - dirbuster (dirb) 
+https://imgur.com/a/Iwz0lRZ - Gobuster

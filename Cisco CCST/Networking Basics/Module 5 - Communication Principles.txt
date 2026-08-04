@@ -1,0 +1,34 @@
+Networking protocols define many aspects of communication across a network.
+
+-- Included Aspects --
+
+Message Format - Depends on the type of message being sent and the channel it is being sent across
+
+Message Size - Depends on the channel used. these rules are very strict
+
+Timing - Determines the speed at which bits move across a network/
+
+Encoding - Messages are converted into bits which must be encoded into radio waves, electrical pulses.
+
+Encapsulation - Every message must include a header which contains the source and destination.
+
+Message Pattern - some messages require acknowledgment before the next message can be sent
+
+
+A packet can be the size of 64-1516 bytes
+
+
+
+Protocol Model
+A set of related protocols, that act as a collection of connected, pre-determined protocols reflecting real-world implementation such as the TCP/IP model to enable communication across a network.
+
+
+Reference Model
+A reference model describes the function at each given layer without providing set protocols to utilise at each layer but acts more as a guidance a bit like a map - but you have to find your mode of transport / path of getting there [the protocols you will use for your destination]
+
+
+HOW MAC ADDRESS TABLES ARE BUILT
+A switch makes its forwarding decisions based on layer 2 information (source and destination mac) (ethernet header of ethernet frame)
+When a swtich receives a frame to forward with an unknown source mac address. it assigns this mac address to the incoming port. fa0/1 etc.
+
+If the destination MAC is not stored within the MAC address table this is known as an unknown unicast. In this situation the switch acts as an old ethernet hub and floods the packet to all ports apart from the incoming one.

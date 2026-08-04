@@ -1,0 +1,36 @@
+A race condition is a situation in programs/software where the timing of events influences the final outcome. It typically occurs when a single variable is
+accessed by multiple threads simultaneously - due to a lack of proper lock mechanisms or synchronisation between the different threads
+
+** Common Causes of Race Conditions **
+
+Parallel Execution    | Web servers may execute multiple requests in parallel to facilitate concurrent users. if these requests access or modify shared resources
+		      | or application states without proper synchronisation, it can lead to race conditions or unexpected behaviours.
+  
+Database Operations   | Concurrent database operations, such as read-modify-write sequences, can introduce race conditions. for example 2 users attempting to update
+		      | the same record simultaneously. the solution lies in enforcing locking mechanisms and transaction isolation
+
+Third-Party Libraries | Web applications often integrate with APIs, third-party libraries and other services. If these external components are not designed to
+		      | handle concurrent access appropriately, race conditions may occur when multiple requests or operations interact with them simultaneously
+
+
+** Typical Web Application **
+A web application follows a multi-tier architecture which separates the application logic into multiple layers or tiers.
+The most common type:
+
+Presentation Tier | responsible for displaying the HTML, CSS and JS within the clients browser
+Application Tier  | Web application logic that receives & processes client requests interacting with the data tier. Node.JS PHP
+Data Tier         | Storage and manipulation of application data. typical database operations include: creating, updating, deleting & searching records.
+		  | This is usually done inside a DBMS (Database Management System) MySQL, PostgreSQL.
+
+
+** Detection **
+It is hard to detect race conditions from a business standpoint, hence why penetration testers and bug bounty hunters are employed.
+pentesters must understand how the system behaves under normal conditions when enforced controls are enforced. these control can be use once, vote once, rate once,
+limit to balance, and limit to one every 5 minutes among others.
+
+** Mitigations **
+Synchronisation Mechanisms | modern programming languages utilise mechanisms like locks, which lock shared resources to a single thread.
+
+Atomic Operations          | Indivisible execution units. sets of instructions grouped together executed without interruption.
+
+Database Transactions      | Groups all database operations into one unit known as a transaction, the group either succeeds or fails as a whole.

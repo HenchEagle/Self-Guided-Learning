@@ -1,0 +1,31 @@
+**
+There are 3 methods of subdomain enumeration
+	- brute force ''
+	- osint ''
+	- virtual host
+
+**
+OSINT
+SSL/TLS certificates are created by CAs (Certificate Authorities) these companies have to take part in certificate transparency logs (CT) logs
+Certificate Transparency Logs are publicy accessible logs of every SSL/TLS certificate created for a domain name.
+The purpose of this is to ensure no malicious or accidentally made certificates are used.
+
+https://crt.sh offers a searchable database of certificates that show current and historical restults
+this can be advantageous to discover subdomains belonging to a domain.
+
+Subdomain searches can be performed through google dorking.
+site:*.domain.com -site:www.domain.com [this will display all websites with the url *.domain.com, but not www.domain.com, therefore it will only display subdomains
+
+**
+DNS Bruteforce
+bruteforcing DNS enumeration is the process of trying a large amount of subdomains from a pre-defined wordlist. as it requires many requests it can be automated utilising tools such as DNSrecon
+
+The above OSINT processes can be automated through the help of toos like Sublst3r.
+
+subdomains for private webpages are often stored within the host files
+	Linux -> /etc/hosts
+	Windows -> c:/windows/system32/drivers/etc/hosts
+
+Automated DNS host enumeration throuh ffuf.
+running the command ffuf -w <wordlist_location> -H "Host: FUZZ.websiteurl.com" -u url
+-sf <size> can be utilised if a lot of websites show up, this will stop ffuf from showing domains of that size. 

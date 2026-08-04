@@ -1,0 +1,35 @@
+command injection is a vulnerability where an attacker manipulate an input field to inject malicious commands into a 
+vulnerable application
+
+Command injection is also often known as remote command execution due to the ability to remotely execute code on behalf
+of another user.
+
+There are often the most lucrative types of vulnerabilities as it allows the attacker to directly interact with the
+targeted system
+
+** DISCOVERY **
+There are to main methodologies for discovering command injection vulnerabilities
+
+Blind - Similar to a blind XSS, there is no direct output from the application when testing payloads. you will have to investigate the behaviours of the application to determine whether or not your payload was successful
+
+Verbose - When the application provides you with direct feedback regarding the success of your payload.
+
+** Detection **
+Effective ways of discovering blind command injection methods is through implementation of some type of time delay through the use of commands such as ping and sleep, if you ping 5 times the application will hang for 5s for example.
+
+another way to check for blind command injection is by forcing an output through operators such as ">" whoami > a.txt
+then we can run cat a.txt to see whether it was successful.
+
+** Useful Payloads **
+
+* Linux *
+whoami - see what user the application is running under to make a guess as to the privileges you posses.
+ls - list the contents of the current directory
+sleep / ping - cause the application to hang
+nc - netcant can be used to spawn a reverse shell onto the vulnerable application to be utilised as a foothold to navigate around the target machine.
+
+* Windows *
+whoami - the same
+dir - same as ls
+ping/timeout - hangs
+

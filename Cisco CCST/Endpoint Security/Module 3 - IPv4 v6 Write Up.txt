@@ -1,0 +1,3 @@
+IPv4 Header Structure
+
+20 Bytes Minimum - organised into blocks of 4 bytes

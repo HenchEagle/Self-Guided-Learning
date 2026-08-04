@@ -1,0 +1,37 @@
+** Amazon Cloudwatch **
+Allows you to monitor infrastrucxture and applications through tracking of metrics
+
+# Cloud watch alarm allows you to perform and event-driven metric based on the metric measured by cloudwatch. Such as a text message or whatevewr,
+
+You can also centralise log management with cloudwatch logs
+
+
+** AWS CloudTrail **
+Because everything inside of AWS is an API call, cloudtrail automatically provides centralised logs of practically everything that happens in the cloud.
+
+
+** AWS Artifact **
+View compliance audits for AWS, and sign agreements with AWS based on compliance requriements.
+
+
+** AWS License Manager **
+Managed licenses to ensure usage doesnt exceed license agreements
+
+
+** Service Control Policies (SCP) **
+Allows you to centrally manage AWS organisations, users and roles access to services, resrouces and individual api calls.
+
+
+** AWS Organisations **
+centralised management of several AWS accounts.
+
+Organisational units allows you to manage several accounts under a single billing plan, as well as apply service control policies based on these OUs.
+
+
+### Governance
+
+AWS Control Tower - Centralised Governance, with options to manage a whole organisation through the landing zone, or pre-configure new accounts structures to ensure best practice configs.
+
+Service Catalog: Allows you to curate compliant, pre-configured networking ressrouces that are approved and can be deployed by approvde individuals to maintain agility, while improving governance.
+
+License Manager: allows you to bring your own licenses, Windows AD or whatever without having to buy them from AWS.

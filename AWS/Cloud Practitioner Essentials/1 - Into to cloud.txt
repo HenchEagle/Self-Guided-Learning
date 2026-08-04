@@ -1,0 +1,33 @@
+Types of AWS Services
+SQS - Simple Queue Service
+S3 - Simple Storage Service (Data Storage)
+EC2 - Elastic Compute Cloud (Scalable Compute)
+
+Cloud provides guaranteed uptime, and physical security.
+
+Cloud computing is: The on demand delivery of IT resources over the internet with pay as you go pricing
+
+Key Benefits:
+- Variable Costs
+- Access powerful infrastructure without large hardware costs
+- Reach global markets
+- Much lower maintanence time and monetary costs
+- Faster deployment 
+- Elastic Resource usage
+
+
+** AWS GLOABL INFRASTRUCTURE **
+AWS contains regions around the world which are clusters of data centres known as availability zones.
+Each region contains at least 3 seperate availability zones which provide availability and fault tolerance.
+
+You have to distribute your compute accross different availability zones to ensure availability.
+
+** SHARED RESPONSIBILITY MODEL **
+Both the customer and AWS are responsible for your infrastructures security. AWS provides physical security,
+redundancy (security of the cloud) the customer is responsible for security in the cloud.
+
+AWS - Updates and patch management of AWS services and infrastructure.
+Customer - Data, client-side data encryption.
+
+Both (server side encryption, in-transit protection, IAM, firewall, OS and network configs)
+^^ Primarily the customer

