@@ -1,0 +1,57 @@
+Models are only as good as the data that they are trained on, bad data is often known as
+
+* Garbage in, garbage out *
+
+The data preparation and processing are arguably the most important parts of training Machine Learning models.
+
+
+=-=-=-= Training Data =-=-=-= 
+There are several types of data
+
+## Labeled data
+Data that comes with a label representing the desired output data
+
+E.G. a collection of images with class labels "cat", "dog", "car"
+
+## Unlabeled data
+A set of unlabeled data, for example a colleciton of images.
+
+
+** THE 2 Main types of data used in training **
+## Structured Data
+Data that is organised within a specific format such as a database or csv file.
+
+Tabular Data: Data that has rows for sets of data, and columns based on its tags and attributes
+
+Time-Series Data: Sequential data that shows progression in time such as stock prices or weather data.
+
+## Unstructured Data
+Unsturcutred data like text, images, video require more complex machine learning techniques to spot patterns within the data.
+
+
+=-=-=-= ML Algorithm =-=-=-=
+The machine learning process is typically divided into 3 broad categories
+
+supervised training, unsupervised training and reinforcement learning
+
+## Supervised Learning
+This utilises labeled data with the goal of creating a blueprint for the model, to predict the output for new unseen data
+
+## Unsupervised Learning
+Utilises unlabaled data, to try and discover inherent relationships, patterns or structures within the input data
+
+## Reinforcement Learning
+A mix of labeled and unlabeled data is utilised for inputs, and the algorith msi provided rewards or penalties for its actions -
+it learns form this feedback.
+
+
+=-=-=-= Inferencing =-=-=-=
+There are 2 main types of inferencing.
+
+## Batch Inferencing
+Takes a large set of data and processes / makes prdeictions on the whole batch at once to provide a set of results.
+This is primarily used for processes that require higher accuracy, with slower decision making.
+
+## Real-Time Inferencing
+Inference is performed in real-time, at a higher cost, with lower accuracy, 
+but with near instantaneous response times for things such as chatbots or self-driving cars.
