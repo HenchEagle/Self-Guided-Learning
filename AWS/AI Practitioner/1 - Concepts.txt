@@ -1,0 +1,40 @@
+Generative AI is a branch of AI that is designed to create images, audio, text or code from existing data.
+
+The concepts.
+
+** AI **
+A broad term that encompases developing intelligent systems that would typically require human intelligence to perform,
+such as problem-solving, reasoning and perception.
+
+This is a broad term that encompasses the several methods of achieving AI.
+
+
+** ML **
+A specifically trained AI designed to perform a single set of tasks, utilising pre-fed data.
+
+
+** Deep Learning **
+Deep learning utilises the concept of neurons and synapses, similar to a human brain for making decisions.
+
+An example of this wihtin AWS is Amazon Rekognito [This can analyse millions of videos, images and streams within seconds]
+
+
+
+** Foundational vs Non-Foundational Models **
+foundational mdoels are, essencially general purpose models that are trained on huge sets of data, primarily utilising deep learning (which is a subset of machine learning)
+
+non-foundational models can come in various sizes, however are designed specifically to perform a single task / set of tasks. these can be both just ML or DL too
+
+
+
+Foundational models are simply the engine that can be fueled to perform a very broad range of tasks.
+
+
+
+** Generative AI **
+Foundational models are a form of genartive AI, however the umbrella term of generative AI is how foundational models are "instruction tuned" to perform as the developer intended.
+
+E.G.
+A pre-tuned model when prompted "write a poem about a tree" may respond "write a poem about a rock".
+
+It needs to be fine-tuned via Deep learning to understand how to process human requests, and not act like an autocomplete engine.
